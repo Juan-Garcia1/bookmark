@@ -13,6 +13,7 @@
     />
 
     <title>Frontend Mentor | Bookmark landing page</title>
+    <link rel="stylesheet" href="./css/styles.css" />
   </head>
 
   <body>
@@ -47,10 +48,10 @@
     </header>
     <!-- /.container -->
 
-    <section class="hero container">
-      <div class="hero__inner">
+    <section class="hero">
+      <div class="hero__inner container">
         <div class="hero__body">
-          <div class="hero__header">A Simple Bookmark Manager</div>
+          <h1 class="hero__header">A Simple Bookmark Manager</h1>
           <!-- /.hero__header -->
           <p class="hero__text"
             >A clean and simple interface to organize your favourite websites.
@@ -58,19 +59,21 @@
             free.</p
           >
           <!-- /.hero__text -->
-          <a href="#" class="btn btn--primary">Get it on Chrome</a>
+          <a href="#" class="btn btn--primary hero__main-btn"
+            >Get it on Chrome</a
+          >
           <!-- /.btn btn--primary -->
           <a href="#" class="btn btn--secondary">Get it on Firefox</a>
           <!-- /.btn btn--secondary -->
         </div>
         <!-- /.hero__body -->
-        <div class="header__img">
+        <div class="hero__img">
           <img
             src="./images/illustration-hero.svg"
             alt="A simple bookmark manager"
           />
         </div>
-        <!-- /.header__img -->
+        <!-- /.hero__img -->
       </div>
       <!-- /.hero__inner -->
     </section>
