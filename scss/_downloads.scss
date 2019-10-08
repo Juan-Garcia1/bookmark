@@ -39,7 +39,8 @@
 .extension__body {
   padding: 35px;
   @include breakpoint(medium) {
-    padding: 40px 67px;
+    padding-left: 67px;
+    padding-right: 67px;
   }
 }
 
@@ -58,17 +59,20 @@
 }
 
 .extension__name {
-  margin-bottom: 16px;
+  margin-bottom: 8px;
   font-weight: 500;
   font-size: 1.2rem;
   color: $secondary-neutral-color;
-  @include breakpoint(medium) {
-    margin-bottom: 19px;
-  }
 }
 
 .extension__version {
   font-size: 15px;
+}
+
+.extension__divider {
+  border: 0;
+  height: 4px;
+  background: url("../images/bg-dots.svg");
 }
 
 @include breakpoint(large) {
