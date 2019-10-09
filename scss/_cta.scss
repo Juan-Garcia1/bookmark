@@ -1,0 +1,54 @@
+.cta {
+  font-size: 18px;
+  background-color: $primary-color;
+  padding-top: 65px;
+  padding-bottom: 53px;
+  text-align: center;
+  &__wrapper {
+    width: 440px;
+    margin: auto;
+  }
+  &__sub-header {
+    text-transform: uppercase;
+    color: #fff;
+    letter-spacing: 0.4em;
+    margin-bottom: 1em;
+    font-size: 0.8em;
+    @include breakpoint(medium) {
+      margin-bottom: 1.9em;
+    }
+  }
+  &__header {
+    font-size: 1.7em;
+    color: #fff;
+    margin-bottom: 1.5em;
+  }
+  &__form {
+    display: flex;
+    flex-direction: column;
+    @include breakpoint(large) {
+      flex-direction: row;
+    }
+  }
+  &__input {
+    padding: 1em 1.5em;
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 1em;
+    &::placeholder {
+      color: $primary-neutral-color;
+      font-size: 0.9em;
+    }
+    @include breakpoint(large) {
+      flex: 1;
+      margin-bottom: initial;
+      margin-right: 1em;
+      padding-top: initial;
+      padding-bottom: initial;
+    }
+  }
+  &__btn {
+    color: #fff;
+    background-color: $secondary-color;
+  }
+}
