@@ -46,6 +46,15 @@
   }
 }
 
+.accordion__header--active {
+  svg {
+    transform: rotate(180deg);
+    path {
+      stroke: $secondary-color;
+    }
+  }
+}
+
 .accordion__body--hide {
   display: none;
 }
