@@ -30,7 +30,7 @@ function serve() {
   });
   gulp.watch("./scss/**/*.scss", scss);
   gulp.watch("./*.html").on("change", browserSync.reload);
-  gulp.watch("./*.js").on("change", browserSync.reload);
+  gulp.watch("./js/*.js").on("change", browserSync.reload);
 }
 
 exports.scss = scss;
