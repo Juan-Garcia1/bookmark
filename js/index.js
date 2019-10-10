@@ -1,4 +1,20 @@
+const tabLinks = document.querySelectorAll(".tab-nav__link");
 const accordionItems = document.querySelectorAll(".accordion__item");
+
+tabLinks.forEach(tabLink => {
+  tabLink.addEventListener("click", function(e) {
+    e.preventDefault();
+    tabLinks.forEach((link, i) => {
+      if (link !== this) {
+        link.classList.remove("tab-nav__link--active");
+        document.querySelector(`#tab-${i}`).classList.add("tab__item--hide");
+      } else {
+        this.classList.add("tab-nav__link--active");
+        document.querySelector(`#tab-${i}`).classList.remove("tab__item--hide");
+      }
+    });
+  });
+});
 
 accordionItems.forEach(accordionItem => {
   accordionItem.addEventListener("click", toogleAccordion);

@@ -111,7 +111,7 @@
     background-color: $primary-color;
     border-bottom-right-radius: 50%;
     height: 52%;
-    width: 85%;
+    width: 68%;
     position: absolute;
     top: 45px;
     left: 0;
@@ -119,10 +119,10 @@
     @include breakpoint(medium) {
       top: 60px;
       height: 65%;
-      width: 70%;
+      width: 58%;
     }
     @include breakpoint(large) {
-      width: 42%;
+      width: 34%;
       height: 350px;
     }
   }
