@@ -1,5 +1,24 @@
+const hamburgerBtn = document.querySelector(".nav__hamburger-icon");
+const closeBtn = document.querySelector(".nav__close-icon");
 const tabLinks = document.querySelectorAll(".tab-nav__link");
 const accordionItems = document.querySelectorAll(".accordion__item");
+
+hamburgerBtn.addEventListener("click", function() {
+  document.querySelector(".nav__wrapper").classList.add("nav__wrapper--show");
+  this.style.opacity = 0;
+  document.querySelector(
+    ".nav__logo:not(.nav__logo--mobile)"
+  ).style.opacity = 0;
+});
+closeBtn.addEventListener("click", function() {
+  document
+    .querySelector(".nav__wrapper")
+    .classList.remove("nav__wrapper--show");
+  hamburgerBtn.style.opacity = 1;
+  document.querySelector(
+    ".nav__logo:not(.nav__logo--mobile)"
+  ).style.opacity = 1;
+});
 
 tabLinks.forEach(tabLink => {
   tabLink.addEventListener("click", function(e) {
