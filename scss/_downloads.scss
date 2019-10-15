@@ -1,14 +1,17 @@
 .download-section {
   margin: 0 auto 40px auto;
-  width: 350px;
+  width: 300px;
   text-align: center;
   @include breakpoint(medium) {
     width: 537px;
     margin-bottom: 65px;
   }
   &__header {
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     margin-bottom: 20px;
+    @include breakpoint(medium) {
+      font-size: 1.8rem;
+    }
     @include breakpoint(large) {
       margin-bottom: 37px;
     }

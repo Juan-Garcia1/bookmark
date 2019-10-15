@@ -1,5 +1,5 @@
 .questions-section {
-  width: 405px;
+  width: 300px;
   margin: 0 auto 50px auto;
   text-align: center;
   @include breakpoint(medium) {
@@ -11,7 +11,7 @@
 }
 
 .accordion {
-  width: 400px;
+  width: 300px;
   margin: 0 auto 105px auto;
   display: flex;
   flex-direction: column;
@@ -23,7 +23,7 @@
     border-bottom: solid 1px #ccc;
   }
   &__header {
-    font-size: 18px;
+    font-size: 14x;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -31,6 +31,9 @@
     &:hover {
       color: $secondary-color;
       cursor: pointer;
+    }
+    @include breakpoint(medium) {
+      font-size: 18px;
     }
   }
   &__body {
