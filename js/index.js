@@ -2,6 +2,9 @@ const hamburgerBtn = document.querySelector(".nav__hamburger-icon");
 const closeBtn = document.querySelector(".nav__close-icon");
 const tabLinks = document.querySelectorAll(".tab-nav__link");
 const accordionItems = document.querySelectorAll(".accordion__item");
+const ctaForm = document.querySelector(".cta__form");
+const ctaInput = document.querySelector(".cta__input");
+const ctaErrorMessage = document.querySelector(".cta__error-message");
 
 hamburgerBtn.addEventListener("click", function() {
   document.querySelector(".nav__wrapper").classList.add("nav__wrapper--show");
@@ -57,4 +60,25 @@ function toogleAccordion() {
       );
     }
   });
+}
+
+ctaForm.addEventListener("submit", submitForm);
+
+function submitForm(e) {
+  const regex = RegExp(/^[^\s@]+@[^\s@]+\.[^\s@]+$/);
+  // check if input value is not empty
+  // if input is not empty, validate email
+  if (ctaInput.value != "") {
+    if (!regex.test(ctaInput.value)) {
+      ctaInput.classList.add("cta__input--error");
+      ctaErrorMessage.textContent = "Whoops, make sure it's an email";
+      ctaErrorMessage.classList.add("cta__error-message--show");
+    } else {
+      ctaInput.value = "";
+      ctaInput.classList.remove("cta__input--error");
+      ctaErrorMessage.textContent = "";
+      ctaErrorMessage.classList.remove("cta__error-message--show");
+    }
+  }
+  e.preventDefault();
 }

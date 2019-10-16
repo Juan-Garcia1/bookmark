@@ -37,19 +37,29 @@
       flex-direction: row;
     }
   }
+  &__input-wrapper {
+    margin-bottom: 1em;
+    flex: 1;
+    @include breakpoint(large) {
+      margin-bottom: initial;
+      margin-right: 1em;
+    }
+  }
   &__input {
     padding: 1em 1.5em;
     border: none;
     border-radius: 5px;
-    margin-bottom: 1em;
+    width: 100%;
+    height: 100%;
+    outline: none;
     &::placeholder {
       color: $primary-neutral-color;
       font-size: 0.9em;
     }
+    &--error {
+      border: solid 2px $secondary-color;
+    }
     @include breakpoint(large) {
-      flex: 1;
-      margin-bottom: initial;
-      margin-right: 1em;
       padding-top: initial;
       padding-bottom: initial;
     }
@@ -62,6 +72,21 @@
       border-color: $secondary-color;
       background-color: #fff;
       cursor: pointer;
+    }
+  }
+  &__error-message {
+    background-color: $secondary-color;
+    color: #fff;
+    display: none;
+    width: 100%;
+    text-align: left;
+    font-size: 0.8em;
+    border-radius: 0 0 4px 4px;
+    margin-top: -4px;
+    padding: 0.3em 1em;
+
+    &--show {
+      display: block;
     }
   }
 }
